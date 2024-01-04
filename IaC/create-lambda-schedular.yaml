@@ -1,0 +1,80 @@
+# Cronjobs
+
+Resources:
+  # Define IAM Role
+  LambdaExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: LambdaExecutionRole1
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Path: "/"
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AmazonS3FullAccess
+      # PermissionsBoundary: !Sub arn:aws:iam::${AWS::AccountId}:policy/ScopePermissions
+      Policies:
+        - PolicyName: LambdaLogsPolicy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource: "*"
+
+  # Create your Lambda
+  CronjobsFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: lambda_spotify_function
+      Handler: lambda_function.lambda_handler
+      Role: !GetAtt LambdaExecutionRole.Arn
+      Code:
+        S3Bucket: build-deployment-bucket848
+        S3Key: code/lambda_function_code.zip
+      Environment:
+        Variables:
+          SPOTIPY_CLIENT_ID: de0c49a27117419ba77b480caa3fe586
+          SPOTIPY_CLIENT_SECRET: 6b857a613f7e41759c927698641213f8
+
+      Runtime: python3.8
+      Timeout: 900
+
+  # Create schedule
+  CronjobsScheduledRule:
+    Type: AWS::Events::Rule
+    Properties:
+      Description: Scheduled Rule
+      ScheduleExpression: cron(42 17 ? * THUR *)
+      # ScheduleExpression: rate(1 day)
+      State: ENABLED
+      Targets:
+        - Arn: !GetAtt CronjobsFunction.Arn
+          Id: TargetFunctionV1
+
+  # Grant permission to Events trigger Lambda
+  PermissionForEventsToInvokeCronjobsFunction:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !Ref CronjobsFunction
+      Action: lambda:InvokeFunction
+      Principal: events.amazonaws.com
+      SourceArn: !GetAtt CronjobsScheduledRule.Arn
+
+  # Create Logs to check if events are working
+  CronjobsFunctionLogsGroup:
+    Type: AWS::Logs::LogGroup
+    DependsOn: CronjobsFunction
+    DeletionPolicy: Delete
+    Properties:
+      LogGroupName: !Join ["/", ["/aws/lambda", !Ref CronjobsFunction]]
+      RetentionInDays: 14
