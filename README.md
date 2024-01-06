@@ -10,9 +10,10 @@ The Project is running on the AWS cloud and the entire project infrastructure wa
 
 ![Spotify-ETL-Architecture drawio](https://github.com/hassan848/AWS-spotify-breakdown/assets/72468804/78a72032-dcb9-4d52-9600-42027cab5abe)
 
+### How To Run
+
 This entire infrastructure was deployed through code that I wrote (bash script and YAML file), all the commands are in the bash script above in the 'IaC' folder with the YAML file. To execute this script be sure to have the code in the same folder as the bash script and yaml file, then execute the following two commands:
 
-### How To Run
 ```
 chmod +x build-infrastructure.sh
 ```
