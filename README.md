@@ -11,6 +11,7 @@ The Project is running on the AWS cloud and the entire project infrastructure wa
 * IAM role - as the lambda execution role with the correct policies & properties
 * EventBridge schedular - with a CRON expression to attach a weekly trigger to the lambda
 * Cloudwatch Rule.
+
 This bucket also stores the code for the lambda with the correct packages. I then created a second s3 bucket for storing the clean data as part of the load stage. (see below of project architecture):
 
 ![Spotify-ETL-Architecture drawio](https://github.com/hassan848/AWS-spotify-breakdown/assets/72468804/78a72032-dcb9-4d52-9600-42027cab5abe)
