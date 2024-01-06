@@ -12,6 +12,7 @@ The Project is running on the AWS cloud and the entire project infrastructure wa
 
 This entire infrastructure was deployed through code that I wrote (bash script and YAML file), all the commands are in the bash script above in the 'IaC' folder with the YAML file. To execute this script be sure to have the code in the same folder as the bash script and yaml file, then execute the following two commands:
 
+### How To Run
 ```
 chmod +x build-infrastructure.sh
 ```
