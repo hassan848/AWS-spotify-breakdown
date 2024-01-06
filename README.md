@@ -6,13 +6,23 @@ An ETL pipeline which is used to analyse Spotify albums, artists and playlists -
 In my code, I was looking at album length over the years and whether there is a trend or change from albums of some of the most successful artists in the music industry. In the first script I looked at the average albums length of albums from the artists 'Drake', 'Micahel Jackson' and 'Bruno Mars'. In the second script I was looking at albums length of artists from a famous spotify pop playlist - and this retreived album data from the last 50 years (See csv files in data folder and visualisations). I found that many of successful albums are getting shorter and shorter in duration of the years.
 
 ## Project Infrastructure & Architecture
-The Project is running on the AWS cloud and the entire project infrastructure was created using code and executing a bash script that I made (using YAML files & Cloudformation) to deploy. The infrastructure consists of a deployment S3 bucket which was used to store all the YAML files to build the Lambda, IAM role, EventBridge schedular and Cloudwatch Rule. This bucket also stores the code for the lambda with the correct packages. I then created a second s3 bucket for storing the clean data as part of the load stage. (see below of project architecture):
+The Project is running on the AWS cloud and the entire project infrastructure was created using code and executing a bash script that I made (using YAML files & Cloudformation) to deploy. The infrastructure consists of a deployment S3 bucket which was used to store all the YAML files which are used to build:
+* The Lambda function with code, package dependencies & environment variables
+* IAM role - as the lambda execution role with the correct policies & properties
+* EventBridge schedular - with a CRON expression to attach a weekly trigger to the lambda
+* Cloudwatch Rule.
+This bucket also stores the code for the lambda with the correct packages. I then created a second s3 bucket for storing the clean data as part of the load stage. (see below of project architecture):
 
 ![Spotify-ETL-Architecture drawio](https://github.com/hassan848/AWS-spotify-breakdown/assets/72468804/78a72032-dcb9-4d52-9600-42027cab5abe)
 
 ### How To Run
 
-This entire infrastructure was deployed through code that I wrote (bash script and YAML file), all the commands are in the bash script above in the 'IaC' folder with the YAML file. To execute this script be sure to have the code in the same folder as the bash script and yaml file, then execute the following two commands:
+This entire infrastructure was deployed through code that I wrote (bash script and YAML file), all the commands are in the bash script above in the 'IaC' folder with the YAML file. To execute this script be sure to have the code in the same folder as the bash script and yaml file. Also be sure to configure the AWS CLI settings to your AWS account user by executing the following command:
+
+```
+aws configure
+```
+then execute the following two commands, to run the bash scripts:
 
 ```
 chmod +x build-infrastructure.sh
