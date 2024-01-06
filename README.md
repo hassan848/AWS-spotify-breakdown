@@ -38,5 +38,6 @@ or
 ```
 This command will now execute the bash script to build and deploy the entire project infrastructure on the cloud.
 
-# Prerequisites
+
+## Prerequisites
 
