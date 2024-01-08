@@ -56,3 +56,22 @@ The bash script being executed makes use of the YAML file and some aws cli servi
 * AWS account - to build, deploy cloud infrastructure and use AWS resources
 * Spotify account (free) to use 'Spotipy' API - provides API account key
 * AWS CLI Installation
+
+## Languages
+<p align="left">
+  <a href="https://www.python.org/" target="_blank">
+    <img src="https://www.vectorlogo.zone/logos/python/python-icon.svg" alt="python" width="40" height="40"/>
+  </a>
+  <a href="https://aws.amazon.com/" target="_blank">
+    <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg" alt="aws" width="40" height="40"/>
+  </a>
+  <a href="https://firebase.google.com/" target="_blank">
+    <!-- Firebase logo -->
+    <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/>
+  </a>
+  <a href="https://flutter.dev" target="_blank">
+    <!-- Flutter logo -->
+    <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="flutter" width="40" height="40"/>
+  </a>
+</p>
+
