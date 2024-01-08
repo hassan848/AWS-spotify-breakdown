@@ -57,21 +57,27 @@ The bash script being executed makes use of the YAML file and some aws cli servi
 * Spotify account (free) to use 'Spotipy' API - provides API account key
 * AWS CLI Installation
 
-## Languages
+## Languages, Tools & Services
 <p align="left">
   <a href="https://www.python.org/" target="_blank">
     <img src="https://www.vectorlogo.zone/logos/python/python-icon.svg" alt="python" width="40" height="40"/>
   </a>
-  <a href="https://aws.amazon.com/" target="_blank">
-    <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg" alt="aws" width="40" height="40"/>
+  <a href="https://aws.amazon.com/lambda/" target="_blank">
+    <!-- AWS Lambda logo -->
+    <img src="https://www.vectorlogo.zone/logos/amazon_aws/lambda.svg" alt="aws-lambda" width="40" height="40"/>
   </a>
-  <a href="https://firebase.google.com/" target="_blank">
-    <!-- Firebase logo -->
-    <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/>
+  <a href="https://www.spotify.com/" target="_blank">
+    <!-- Spotify logo -->
+    <img src="https://www.vectorlogo.zone/logos/spotify/spotify-icon.svg" alt="spotify" width="40" height="40"/>
   </a>
-  <a href="https://flutter.dev" target="_blank">
-    <!-- Flutter logo -->
-    <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="flutter" width="40" height="40"/>
+  <a href="https://aws.amazon.com/cloudformation/" target="_blank">
+    <!-- AWS CloudFormation logo -->
+    <img src="https://www.vectorlogo.zone/logos/amazon_aws/cloudformation.svg" alt="aws-cloudformation" width="40" height="40"/>
+  </a>
+  <a href="https://aws.amazon.com/s3/" target="_blank">
+    <!-- AWS S3 logo -->
+    <img src="https://www.vectorlogo.zone/logos/amazon_aws/s3.svg" alt="aws-s3" width="40" height="40"/>
   </a>
 </p>
+
 
