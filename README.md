@@ -52,4 +52,7 @@ The bash script being executed makes use of the YAML file and some aws cli servi
 10. Finally creates a CLOUDFORMATION STACK which executes the YAML file in the S3 thus deploying the lambda and rest of the cloud infrastructure.
 
 ## Prerequisites
-
+* Python 3.x
+* AWS account - to build, deploy cloud infrastructure and use AWS resources
+* Spotify account (free) to use 'Spotipy' API - provides API account key
+* 
