@@ -38,6 +38,18 @@ or
 ```
 This command will now execute the bash script to build and deploy the entire project infrastructure on the cloud.
 
+### Bash Instructions
+The bash script being executed makes use of the YAML file and some aws cli services/commands here is a list of what the bash script does:
+1. A create bucket function that will create a new AWS S3 bucket eveytime it is invoked.
+2. Invokes the create-bucket function to create a deployment s3 bucket.
+3. Invokes the create-bucket function to create a clean data s3 bucket.
+4. Copies the local YAML file from directory to the Deployment s3 bucket in AWS cloud.
+5. PIP install the necessary package dependecies for the lambda code into a new 'packages' folder.
+6. Copies the lambda code/files into that same 'packages' folder.
+7. cd/move into this 'packages' subdirectory.
+8. ZIP the current directory => that contains the code and packages.
+9. Moves this zip file to the deployment s3 bucket in the aws cloud (matching the location assigned to the lambda code in the YAML file)
+10. Finally creates a CLOUDFORMATION STACK which executes the YAML file in the S3 thus deploying the lambda and rest of the cloud infrastructure.
 
 ## Prerequisites
 
