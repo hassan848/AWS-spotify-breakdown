@@ -55,4 +55,4 @@ The bash script being executed makes use of the YAML file and some aws cli servi
 * Python 3.x
 * AWS account - to build, deploy cloud infrastructure and use AWS resources
 * Spotify account (free) to use 'Spotipy' API - provides API account key
-* 
+* AWS CLI Installation
