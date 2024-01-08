@@ -64,7 +64,7 @@ The bash script being executed makes use of the YAML file and some aws cli servi
   </a>
   <a href="https://aws.amazon.com/lambda/" target="_blank">
     <!-- AWS Lambda logo -->
-    <img src="https://www.vectorlogo.zone/logos/amazon_aws/lambda.svg" alt="aws-lambda" width="40" height="40"/>
+    <img src="https://symbols.getvecta.com/stencil_9/36_lambda-function.b2a8536bdb.svg" alt="aws-lambda" width="40" height="40"/>
   </a>
   <a href="https://www.spotify.com/" target="_blank">
     <!-- Spotify logo -->
