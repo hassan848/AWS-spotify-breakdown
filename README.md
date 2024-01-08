@@ -72,11 +72,11 @@ The bash script being executed makes use of the YAML file and some aws cli servi
   </a>
   <a href="https://aws.amazon.com/cloudformation/" target="_blank">
     <!-- AWS CloudFormation logo -->
-    <img src="https://www.vectorlogo.zone/logos/amazon_aws/cloudformation.svg" alt="aws-cloudformation" width="40" height="40"/>
+    <img src="https://symbols.getvecta.com/stencil_16/5_aws-cloudformation.14fbb098b1.svg" alt="aws-cloudformation" width="40" height="40"/>
   </a>
   <a href="https://aws.amazon.com/s3/" target="_blank">
     <!-- AWS S3 logo -->
-    <img src="https://www.vectorlogo.zone/logos/amazon_aws/s3.svg" alt="aws-s3" width="40" height="40"/>
+    <img src="https://symbols.getvecta.com/stencil_24/7_amazon-s3-bucket.b7a1cbdb89.svg" alt="aws-s3" width="40" height="40"/>
   </a>
 </p>
 
